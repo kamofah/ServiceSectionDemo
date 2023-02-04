@@ -1,0 +1,181 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+/* Colors */
+:root {
+    --primary: #597383;
+    --secondary: #6B8494;
+    --accent: #8AD2FF;
+    --font: white;
+}
+
+/* Resets all default styling */
+* {
+    margin: 0;
+}
+
+/* 
+The styling for the body shows how to use 
+the CSS custom variables
+*/
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--primary);
+    color: var(--font);
+}
+
+
+/* 
+.serviceHeading and .serviceCardContainer both 
+shared similar flexbox properties so we reformatted the CSS
+and wrote these properties in a shorthand form instead of writing it twice
+*/
+.serviceHeading, .serviceCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading Styling */
+.serviceHeading {
+    padding: 1.5rem;
+    margin: .2rem 0rem;
+}
+
+.serviceHeadingDecoration {
+    width: 2rem;
+    height: .4rem;
+    border-radius: 12px;
+    background-color: var(--accent);
+}
+
+/* Card Styling  */
+.serviceCardContainer{
+    flex-direction: column;
+    text-align: center;
+}
+
+.serviceCard {
+    background-color: var(--secondary);
+    margin-bottom: 1.2rem;
+    padding: 1.5rem;
+    width: 15rem;
+    height: 9rem;
+    text-align: left;
+    border-radius: 10px;
+    filter: drop-shadow(0 4px 2px rgb(31, 31, 31));
+}
+
+.serviceCardHeading {
+    display: flex;
+}
+
+.serviceCardTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.serviceCardText {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.serviceCardHeading > svg {
+    margin-right: .4rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .serviceHeading {
+        padding: 2.2rem;
+        font-size: 1.4rem;
+    }
+
+    .serviceCard {
+        height: 13rem;
+        width: 16rem;
+        font-weight: 100;
+        margin-bottom: 1.7rem;
+        font-size: 1.25rem;
+        line-height: 1.4rem;
+    }
+
+    .serviceCardTitle {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .serviceCardTitle {
+        font-size: 1.3rem;
+    }
+
+    .serviceCardText {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+
+    .serviceCardContainer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .serviceCard {
+        height: 16rem;
+        width: 16rem;
+        font-weight: 100;
+    }
+
+    .serviceHeading {
+        justify-content: flex-start;
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 9.2rem;
+    }
+
+    .serviceHeading, .serviceCardContainer {
+        padding: 2rem;
+    }
+
+    .serviceHeading {
+        font-size: 2.3rem;
+    }
+
+    .serviceCard {
+        height: 20rem;
+        width: 20rem;
+        font-weight: 100;
+    }
+
+    .serviceCardTitle {
+        font-size: 1.7rem;
+    }
+
+    .serviceCardText {
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+    }
+
+    .serviceCardContainer {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .serviceCardHeading > svg {
+        transform: scale(1.5);
+        margin: 0 1.2rem 1rem 0;
+    }
+
+    .serviceCardHeading {
+        align-items: center;
+    }
+}
