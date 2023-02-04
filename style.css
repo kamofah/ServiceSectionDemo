@@ -139,7 +139,7 @@ and wrote these properties in a shorthand form instead of writing it twice
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding: 9.2rem;
+        padding: 6.2rem;
     }
 
     .serviceHeading, .serviceCardContainer {
@@ -154,6 +154,7 @@ and wrote these properties in a shorthand form instead of writing it twice
         height: 20rem;
         width: 20rem;
         font-weight: 100;
+        margin-right: 2rem;
     }
 
     .serviceCardTitle {
